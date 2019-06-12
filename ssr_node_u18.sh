@@ -73,11 +73,11 @@ fi
 echo "Checking the universe repository configuration..."
 apt install software-properties-common && apt-add-repository universe
 echo "Updating exsit package..."
-apt clean all && apt autoremove -y && apt update && apt upgrade -y && apt dist-upgrade -y
+apt clean all && apt autoremove -y && apt update -y && apt upgrade -y && apt dist-upgrade -y
 echo "Installing necessary package..."
 apt install git python python-setuptools python-pip build-essential ntpdate htop -y
 echo "Please select correct system timezone for your node."
-dpkg-reconfigure tzdata
+#dpkg-reconfigure tzdata
 echo "Installing libsodium..."
 wget https://codeload.github.com/jedisct1/libsodium/tar.gz/1.0.18-RELEASE
 tar xf 1.0.18-RELEASE && cd libsodium-1.0.18-RELEASE
